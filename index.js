@@ -547,8 +547,8 @@ function parseDiscordCommand(msg, mentioned) {
         });
       }
 
-      // 7d!players
-      if(cmd === "PLAYERS" || cmd === "P" || cmd === "PL" || cmd === "LP") {
+      // 7d!online
+      if(cmd === "ONLINE" || cmd === "O") {
         telnet.exec("lp", (err, response) => {
           if(!err) {
             processTelnetResponse(response, (line) => {
